@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --color-primary: var(--restaurant-primary, #1f4d3a);
+  --color-secondary: var(--restaurant-secondary, #c45c26);
+  --color-accent: var(--restaurant-accent, #e8b923);
+  --color-background: var(--restaurant-background, #f6f1e8);
+  --color-ink: var(--restaurant-ink, #14201b);
+  --color-muted: var(--restaurant-muted, #5c6b64);
+  --shadow-soft: 0 10px 30px rgba(20, 32, 27, 0.08);
+  --shadow-lift: 0 22px 50px rgba(20, 32, 27, 0.16);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
